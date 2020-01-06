@@ -39,3 +39,5 @@
 - belongs_to :posts
 
 
+
+
