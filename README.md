@@ -5,8 +5,8 @@
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :posts
-- has_many :group
+- has_many :posts,  through:  :group_posts
+- has_many :group,  through:  :group_posts
 
 ## postsテーブル
 |Column|Type|Options|
@@ -15,17 +15,17 @@
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :group
+- belongs_to :group
 - has_many :group_posts
 - has_many  :group,  through:  :group_posts
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|groupname|text|null: false|
 ### Association
-- belongs_to :post
-- belongs_to :user
+- has_many :post
+- has_many :user
 - has_many  :group_posts
 - has_many  :posts,  through:  :group_posts
 
