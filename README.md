@@ -12,17 +12,18 @@
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|image|string|null: true|
+|text|string|null: true|
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :groups
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text|null: false|
-|addmenber|text|null: false|
+|name|string|null: false|
 ### Association
 - has_many :posts
 - has_many :users
@@ -34,5 +35,5 @@
 |group_id|integer|null: false, foreign_key: true|
 |users_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
