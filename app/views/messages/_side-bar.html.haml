@@ -1,0 +1,19 @@
+.side-bar
+  .header
+    .box
+      .box__user-name name
+      .box__user-menu
+        .box__user-menu--link
+          = link_to "#", class:"link--edit" do
+            = icon('fas','edit')
+          = link_to "#", class:"link--cog" do
+            = icon('fas','cog')
+
+
+  .group-list
+    .box
+      .box__message-1 techcamp
+      .box__message-2 まだメッセージがありません
+
+    -# .contents
+-# .box__message
