@@ -1,0 +1,39 @@
+.chat-main
+
+
+  .header
+    .box1
+      .box1__test test
+      .box1__member
+        .member member:name
+    .box2
+      .box2__link 
+        = link_to "Edit","#"
+
+
+  .message-list
+    .boxes
+      .box1
+        .box1__message1 name
+        .box1__message2 time
+      .box2
+        .box2__message おはよう!
+      .box3
+        .messages
+          .messages__message1 name
+          .messages__message2 time
+        .message3 message
+
+
+  .message-form
+    %form.boxes
+      .box1
+        %input.box1__message{:placeholder => "type a message"}
+        .box1__icon 
+          %label{for: "form"}
+            = icon('fa', 'image')
+          %input.hidden{type: "file", id:"form"}
+      .box2
+        .box2_message
+          %input{type: "submit", name: "commit", value: "Send", class: "submit-btn"}
+          
