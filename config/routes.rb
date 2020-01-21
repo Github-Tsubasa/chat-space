@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   root 'groups#index'
   resources :users, only: [:edit, :update]
   # resources :groups, only: [:new, :create]
-  resources :groups, only: [:index, :create, :edit, :update]
+  resources :groups, only: [:index, :create, :edit, :update] do
     resources :messages, only: [:index, :create]
+  end
 
     def show_last_message
       if (last_message = messages.last).present?
