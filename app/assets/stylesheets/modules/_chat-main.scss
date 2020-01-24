@@ -1,13 +1,19 @@
 .chat-main {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: #ffffff;
+  overflow: scroll;
+
+
+  // position: relative;
+  // padding-bottom: 90px;
+  // box-sizing: border-box;
 }
 
 
   .header {
     height: 100px;
-    width: 100%;    
+    width: 100%;
     display: flex;
     justify-content: space-between;
   
@@ -38,7 +44,7 @@
 
 
   .message-list{
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     .boxes{
       margin-left: 40px;
@@ -81,55 +87,84 @@
 
   .message-form{
     height: 90px;
-    width: calc(100% - 300px);
-    background-color: #d2d2d2;
-    display: flex;
-    position: fixed;
-    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #ddd;
+    // position: fixed;
+    // position: absolute;
+
     .boxes{
-      display: flex;
-      height: 50px;
-      width: 100%;
-      padding: 20px 40px;
-      .box1{
+      position: relative;
+
+      .new_message{
         display: flex;
-        background-color: #ffffff;
+      }
+      .form__message{
         height: 50px;
         width: 100%;
-        position: relative;
-        &__message{
-          width: 100%;
-          padding-left: 10px;
-        }
-        &__icon{
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-        }
-        .link{
-          color: black;
-        }
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+      }
+      .form__mask__image{
+        background-color: white;
+        margin-right: 10px;
+        // icon: 'fas', 'image', class 'icon';
+        font-size: 1.3rem;
+        padding-top: 10px;
+        padding-right: 10px;
+        // align-items: center;
+        // cursor: pointer;
+
         .hidden{
           display: none;
-        }
+        } 
       }
-      .box2{
+
+      .form__submit{
         height: 50px;
         width: 100px;
         background-color: #38aef0;
-        margin-left: 15px;
-        .submit-btn{
-          height: 50px;
-          width: 100px;
-          background-color: #38aef0;
-          color: white;
-          font-family: inherit;
-          font-size: inherit;
-          cursor: pointer;
-        }
+        color: white;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: pointer;
       }
+
+        
+        // &__message{
+        //   width: 100%;
+        //   padding-left: 10px;
+        // }
+        // &__icon{
+        //   font-size: 1.3rem;
+        //   position: absolute;
+        //   top: 10px;
+        //   right: 10px;
+        //   cursor: pointer;
+        // }
+        // .link{
+        //   color: black;
+        // }
+        // .hidden{
+        //   display: none;
+        // }
+  
+      // .box2{
+      //   height: 50px;
+      //   width: 100px;
+      //   background-color: #38aef0;
+      //   margin-left: 15px;
+      //   .submit-btn{
+      //     height: 50px;
+      //     width: 100px;
+      //     background-color: #38aef0;
+      //     color: white;
+      //     font-family: inherit;
+      //     font-size: inherit;
+      //     cursor: pointer;
+      //   }
+      // }
     }
   }
 

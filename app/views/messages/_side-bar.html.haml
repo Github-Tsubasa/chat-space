@@ -5,9 +5,9 @@
         = current_user.name
       .box__user-menu
         .box__user-menu--link
-          = link_to "#", class:"link--edit" do
+          = link_to new_group_path, class:"link--edit" do
             = icon('fas','edit')
-          = link_to "edit_user_path(current_user)", class:"link--cog" do
+          = link_to edit_user_path(current_user), class:"link--cog" do
             = icon('fas','cog')
 
   .group-list
