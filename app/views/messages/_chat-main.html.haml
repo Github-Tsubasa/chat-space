@@ -20,29 +20,18 @@
         .box2__message おはよう!
       .box3
         .messages
-          = render @messages
+          .messages--render
+            = render @messages
           .messages__message1 name
           .messages__message2 time
         .message3 message
 
 
   .message-form
-    %form.boxes
-      .box1
-        %input.box1__message{:placeholder => "type a message"}
-        .box1__icon 
-          %label{for: "form"}
-            = icon('fa', 'image')
-          %input.hidden{type: "file", id:"form"}
-      .box2
-        .box2_message
-          %input{type: "submit", name: "commit", value: "Send", class: "submit-btn"}
-
-    .form
+    .boxes
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'hidden'
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit' 

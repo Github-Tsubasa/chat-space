@@ -5,18 +5,19 @@
         = current_user.name
       .box__user-menu
         .box__user-menu--link
-          = link_to "#", class:"link--edit" do
+          = link_to new_group_path, class:"link--edit" do
             = icon('fas','edit')
-          = link_to "edit_user_path(current_user)", class:"link--cog" do
+          = link_to edit_user_path(current_user), class:"link--cog" do
             = icon('fas','cog')
-
 
   .group-list
     .box
-      = link_to group_messages_path(group) do
-      .box__message-1 techcamp
-      .box__message-2 まだメッセージがありません
-        = group.show_last_message
+      - current_user.groups.each do |group| 
+        = link_to group_messages_path(group) do
+          .box__message-1 
+            = group.name
+          .box__message-2 
+            = group.show_last_message
 
 
 
