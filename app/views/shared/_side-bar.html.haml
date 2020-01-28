@@ -1,0 +1,47 @@
+-# .side-bar
+-#   .header
+-#     %h3.header__name
+-#       = current_user.name
+-#     %ul.header__lists
+-#       %li.list
+-#         = link_to new_group_path do
+-#           = icon('fas', 'edit', class: 'icon')
+-#       %li.list
+-#         = link_to edit_user_path(current_user) do
+-#           = icon('fas', 'cog', class: 'icon')
+-#   .groups
+-#     - current_user.groups.each do |group|
+-#       .group
+-#         = link_to group_messages_path(group) do
+-#           .group__name
+-#             = group.name
+-#           .group__message
+-#             = group.show_last_message
+
+
+.side-bar
+  .header
+    .box
+      .box__user-name 
+        = current_user.name
+      .box__user-menu
+        .box__user-menu--link
+          = link_to new_group_path, class:"link--edit" do
+            = icon('fas','edit')
+          = link_to edit_user_path(current_user), class:"link--cog" do
+            = icon('fas','cog')
+
+
+  .group-list
+    - current_user.groups.each do |group|
+      .box
+        = link_to group_messages_path(group) do
+          .box__message-1
+            = group.name
+          .box__message-2 
+            = group.show_last_message
+
+
+
+
+-# = link_to group_messages_path(@group) do
