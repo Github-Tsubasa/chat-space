@@ -40,43 +40,11 @@
 
   .message-list{
     height: calc(100vh - 100px - 90px);
+    margin-left: 40px;
     background-color: #fafafa;
-    .boxes{
-      margin-left: 40px;
-      .box1{
-        display: flex;
-        padding-top: 35px;;
-        &__message1{
-          font-size: 16px;
-          color:  #333333;
-        }
-        &__message2{
-          font-size: 12px;
-          color:  #999999;
-        }
-      }
-      .box2{
-        padding-top: 12px;
-        &__message{
-          font-size: 14px;
-          color:  #434A54;
-        }
-      }
-      .box3{
-        padding-top: 46px;
-        .messages{
-          display: flex;
-          &__message1{
-            font-size: 16px;
-            color:  #333333;
-          }
-          &__message2{
-            font-size: 12px;
-            color:  #999999;     
-          }
-        }
-      }
-    }
+    overflow: scroll;
+
+    
   }
 
 
@@ -98,6 +66,8 @@
         padding: 0 40px 0 10px;
         color: #434a54;
         border-style: none;
+        outline: none;
+
       }
       .form__mask__image{
         background-color: white;
@@ -118,6 +88,7 @@
         color: white;
         font-family: inherit;
         font-size: inherit;
+        outline: none;
         cursor: pointer;
       }
     }
