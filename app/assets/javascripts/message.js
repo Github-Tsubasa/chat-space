@@ -92,8 +92,8 @@ $(function(){
       //メッセージが入ったHTMLに、入れ物ごと追加
       $('.messages').append(insertHTML);
     })
-    .fail(function(alert) {
-      console.log('error');
+    .fail(function(t) {
+      alert('error');
     });
   };
 
