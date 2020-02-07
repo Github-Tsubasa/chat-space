@@ -40,12 +40,13 @@
 
   .message-list{
     height: calc(100vh - 100px - 90px);
-    margin-left: 40px;
     background-color: #fafafa;
     overflow: scroll;
 
 
     .message{
+      margin-left: 40px;
+      
       .upper-message{
         display: flex;
 
