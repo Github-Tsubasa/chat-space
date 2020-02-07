@@ -74,7 +74,9 @@ $(function(){
 
 
   var reloadMessages = function() {
+    // console.log(1)
     last_message_id = $('.message:last').data("message-id");
+    // console.log(last_message_id)
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -83,14 +85,16 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
+      // console.log(messages)
       //追加するHTMLの入れ物を作る
       var insertHTML = '';
       //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
       $.each(messages, function(i, message) {
+        // console.log(message)
         insertHTML += buildHTML(message)
       });
       //メッセージが入ったHTMLに、入れ物ごと追加
-      $('.messages').append(insertHTML);
+      $('.message-list').append(insertHTML);
     })
     .fail(function(t) {
       alert('error');

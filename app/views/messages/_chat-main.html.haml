@@ -3,14 +3,16 @@
 
   .header
     .box1
-      .box1__test test
+      .box1__test 
+        = @group.name
       .box1__member
-        .member member:name
+        - @group.users.each do |user|
+          = user.name
+
     .box2
       .box2__link 
-        = link_to "Edit","#"
-
-
+        = link_to "Edit", edit_group_path(@group)
+        
   .message-list
     = render @messages
 
