@@ -9,9 +9,12 @@
         - @group.users.each do |user|
           = user.name
 
-    .box2
-      .box2__link 
-        = link_to "Edit", edit_group_path(@group)
+    .box2 
+      .box2__link
+        = link_to edit_group_path(@group) do
+          .box2__link__name Edit
+
+        
         
   .message-list
     = render @messages

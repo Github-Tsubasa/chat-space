@@ -12,27 +12,46 @@
     display: flex;
     justify-content: space-between;
   
-
     .box1{
+      margin-left: 40px;
       &__test{
         font-size: 20px;
-        color: #333333;
-        margin-top: 35px;
-        margin-bottom: 15px;
-        margin-left: 40px;
+          color: #333333;
+          margin-top: 35px;
+          margin-bottom: 15px;
       }
       &__member{
         font-size: 12px;
         color:  #999999;
-        margin-left: 40px;
       }
     }
     .box2{
       width: 72px;
+      height:40px;
+      border:1px solid #38aef0;
+      float: right;
+      line-height: 40px;
+      margin-right: 40px;
+
       &__link{
-        color: #38aef0;
-        font-size: 16px;
-        margin: 28px, 20px;
+        width: 72px;
+        height:40px;
+
+
+        // text-decoration: none;
+
+         a {
+          text-decoration: none;
+        }
+
+
+
+        &__name{
+          color: #38aef0;
+          font-size: 16px;
+          // margin: 28px, 20px;
+          padding: 0 20px;
+        }
       }
     }
   }
@@ -46,7 +65,7 @@
 
     .message{
       margin-left: 40px;
-      
+
       .upper-message{
         display: flex;
 
