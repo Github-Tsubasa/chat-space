@@ -71,7 +71,7 @@ $(function(){
       $('.form__submit').prop('disabled', false);
     });
   });
-
+  
 
   var reloadMessages = function() {
     // console.log(1)
@@ -99,12 +99,10 @@ $(function(){
     .fail(function(t) {
       alert('error');
     });
-
-    if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-      // console.log("hello")
-      setInterval(reloadMessages, 7000);
-    }
   };
-
   
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 });
+

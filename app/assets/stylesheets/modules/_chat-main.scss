@@ -37,14 +37,9 @@
         width: 72px;
         height:40px;
 
-
-        // text-decoration: none;
-
          a {
           text-decoration: none;
         }
-
-
 
         &__name{
           color: #38aef0;
@@ -64,9 +59,10 @@
 
 
     .message{
-      margin-left: 40px;
+      padding-top: 12px;
 
       .upper-message{
+        padding-bottom: 12px;
         display: flex;
 
         &__user-name{
