@@ -85,22 +85,24 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      // console.log(messages)
-      //追加するHTMLの入れ物を作る
-      var insertHTML = '';
-      //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
-      $.each(messages, function(i, message) {
-        // console.log(message)
-        insertHTML += buildHTML(message)
-      });
-      //メッセージが入ったHTMLに、入れ物ごと追加
-      $('.message-list').append(insertHTML);
+      if (messages.length !== 0) {
+        // console.log(messages)
+        //追加するHTMLの入れ物を作る
+        var insertHTML = '';
+        //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        //メッセージが入ったHTMLに、入れ物ごと追加
+        $('.message-list').append(insertHTML);
+        $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
+      }
     })
     .fail(function(t) {
       alert('error');
     });
   };
-  
+
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }

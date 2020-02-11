@@ -6,8 +6,10 @@
       .box1__test 
         = @group.name
       .box1__member
-        - @group.users.each do |user|
-          = user.name
+        .box1__member-member Member : 
+        .box1__member-name
+          - @group.users.each do |user|
+            = user.name
 
     .box2 
       .box2__link

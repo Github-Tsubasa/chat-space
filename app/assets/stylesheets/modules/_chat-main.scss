@@ -23,6 +23,8 @@
       &__member{
         font-size: 12px;
         color:  #999999;
+        display: flex;
+
       }
     }
     .box2{
@@ -60,6 +62,7 @@
 
     .message{
       padding-top: 12px;
+      margin-left: 40px;
 
       .upper-message{
         padding-bottom: 12px;
