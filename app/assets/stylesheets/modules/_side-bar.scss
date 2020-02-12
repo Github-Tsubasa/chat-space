@@ -50,7 +50,8 @@
     background-color: #2f3e51;
 
     .box{
-      padding: 20px 20px 40px 20px;
+      padding: 20px 20px 0;
+      height: 100%;
       &__message-1{   
         color: #ffffff;
         font-weight: bold;
@@ -61,6 +62,7 @@
         font-weight: bold;
         font-size: 11px;
         padding-top: 5px;
+        padding-bottom: 40px; 
       }
     }
   }
