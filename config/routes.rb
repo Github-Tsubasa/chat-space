@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     namespace :api do
       resources :messages, only: :index, defaults: { format: 'json' }
     end
-  
+  root  'users#index'
 
     def show_last_message
       if (last_message = messages.last).present?
